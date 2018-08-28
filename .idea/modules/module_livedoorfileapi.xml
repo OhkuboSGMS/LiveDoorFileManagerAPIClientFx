@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_livedoorfileapi" default="compile.module.livedoorfileapi">
+  <dirname property="module.livedoorfileapi.basedir" file="${ant.file.module_livedoorfileapi}"/>
+  
+  <property name="module.jdk.home.livedoorfileapi" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.livedoorfileapi" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.livedoorfileapi" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.livedoorfileapi" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="livedoorfileapi.output.dir" value="${module.livedoorfileapi.basedir}/../../out/production/livedoorfileapi"/>
+  <property name="livedoorfileapi.testoutput.dir" value="${module.livedoorfileapi.basedir}/../../out/test/livedoorfileapi"/>
+  
+  <path id="livedoorfileapi.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="livedoorfileapi.module.production.classpath">
+    <path refid="${module.jdk.classpath.livedoorfileapi}"/>
+  </path>
+  
+  <path id="livedoorfileapi.runtime.production.module.classpath">
+    <pathelement location="${livedoorfileapi.output.dir}"/>
+  </path>
+  
+  <path id="livedoorfileapi.module.classpath">
+    <path refid="${module.jdk.classpath.livedoorfileapi}"/>
+    <pathelement location="${livedoorfileapi.output.dir}"/>
+  </path>
+  
+  <path id="livedoorfileapi.runtime.module.classpath">
+    <pathelement location="${livedoorfileapi.testoutput.dir}"/>
+    <pathelement location="${livedoorfileapi.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.livedoorfileapi">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.livedoorfileapi">
+    <patternset refid="excluded.from.module.livedoorfileapi"/>
+  </patternset>
+  
+  
+  <target name="compile.module.livedoorfileapi" depends="compile.module.livedoorfileapi.production,compile.module.livedoorfileapi.tests" description="Compile module livedoorfileapi"/>
+  
+  <target name="compile.module.livedoorfileapi.production" depends="register.custom.compilers" description="Compile module livedoorfileapi; production classes"/>
+  
+  <target name="compile.module.livedoorfileapi.tests" depends="register.custom.compilers,compile.module.livedoorfileapi.production" description="compile module livedoorfileapi; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.livedoorfileapi" description="cleanup module">
+    <delete dir="${livedoorfileapi.output.dir}"/>
+    <delete dir="${livedoorfileapi.testoutput.dir}"/>
+  </target>
+</project>

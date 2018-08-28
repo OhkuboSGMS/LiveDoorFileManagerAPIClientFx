@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_livedoorfileapi_test" default="compile.module.livedoorfileapi_test">
+  <dirname property="module.livedoorfileapi_test.basedir" file="${ant.file.module_livedoorfileapi_test}"/>
+  
+  <property name="module.jdk.home.livedoorfileapi_test" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.livedoorfileapi_test" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.livedoorfileapi_test" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.livedoorfileapi_test" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="livedoorfileapi_test.output.dir" value="undefined"/>
+  <property name="livedoorfileapi_test.testoutput.dir" value="${module.livedoorfileapi_test.basedir}/../../out/test/classes"/>
+  
+  <path id="livedoorfileapi_test.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="livedoorfileapi_test.module.production.classpath">
+    <path refid="${module.jdk.classpath.livedoorfileapi_test}"/>
+    <pathelement location="${livedoorfileapi_main.output.dir}"/>
+    <path refid="library.gradle:_no.tornado:tornadofx:1.7.17.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.60.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel-coroutines:1.15.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:0.24.0.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel-gson:1.15.0.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel:1.15.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.result:result:1.5.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:0.24.0.classpath"/>
+    <path refid="library.gradle:_org.glassfish:javax.json:1.1.2.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.gradle:_javax.json:javax.json-api:1.1.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.11.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+  </path>
+  
+  <path id="livedoorfileapi_test.runtime.production.module.classpath">
+    <path refid="livedoorfileapi_main.runtime.production.module.classpath"/>
+    <path refid="library.gradle:_no.tornado:tornadofx:1.7.17.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.60.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel-coroutines:1.15.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:0.24.0.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel-gson:1.15.0.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel:1.15.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.result:result:1.5.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:0.24.0.classpath"/>
+    <path refid="library.gradle:_org.glassfish:javax.json:1.1.2.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.gradle:_javax.json:javax.json-api:1.1.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.11.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+  </path>
+  
+  <path id="livedoorfileapi_test.module.classpath">
+    <path refid="${module.jdk.classpath.livedoorfileapi_test}"/>
+    <pathelement location="${livedoorfileapi_main.output.dir}"/>
+    <path refid="library.gradle:_no.tornado:tornadofx:1.7.17.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.60.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel-coroutines:1.15.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:0.24.0.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel-gson:1.15.0.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel:1.15.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.result:result:1.5.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:0.24.0.classpath"/>
+    <path refid="library.gradle:_org.glassfish:javax.json:1.1.2.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.gradle:_javax.json:javax.json-api:1.1.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.11.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+  </path>
+  
+  <path id="livedoorfileapi_test.runtime.module.classpath">
+    <pathelement location="${livedoorfileapi_test.testoutput.dir}"/>
+    <path refid="livedoorfileapi_main.runtime.module.classpath"/>
+    <path refid="library.gradle:_no.tornado:tornadofx:1.7.17.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.60.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel-coroutines:1.15.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:0.24.0.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel-gson:1.15.0.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.fuel:fuel:1.15.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_com.github.kittinunf.result:result:1.5.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:0.24.0.classpath"/>
+    <path refid="library.gradle:_org.glassfish:javax.json:1.1.2.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.gradle:_javax.json:javax.json-api:1.1.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.11.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.2.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.livedoorfileapi_test">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.livedoorfileapi_test">
+    <patternset refid="excluded.from.module.livedoorfileapi_test"/>
+  </patternset>
+  
+  
+  <target name="compile.module.livedoorfileapi_test" depends="compile.module.livedoorfileapi_test.production,compile.module.livedoorfileapi_test.tests" description="Compile module livedoorfileapi_test"/>
+  
+  <target name="compile.module.livedoorfileapi_test.production" depends="register.custom.compilers,compile.module.livedoorfileapi_main" description="Compile module livedoorfileapi_test; production classes"/>
+  
+  <target name="compile.module.livedoorfileapi_test.tests" depends="register.custom.compilers,compile.module.livedoorfileapi_test.production" description="compile module livedoorfileapi_test; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.livedoorfileapi_test" description="cleanup module">
+    <delete dir="${livedoorfileapi_test.output.dir}"/>
+    <delete dir="${livedoorfileapi_test.testoutput.dir}"/>
+  </target>
+</project>

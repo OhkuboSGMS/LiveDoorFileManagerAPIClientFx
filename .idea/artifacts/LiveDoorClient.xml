@@ -1,0 +1,47 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="LiveDoorClient">
+    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.os.ldfmapi.LiveDoorFileManagerClientApp" />
+        <option name="description" value="This is Live Door FileManager API Client &#10;You can upload,rename and delete Files and Directories. Make Directory." />
+        <option name="height" value="600" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="dmg" />
+        <option name="title" value="LiveDoorFileManagerCilentWin" />
+        <option name="updateMode" value="always" />
+        <option name="vendor" value="OkuboSGMS" />
+        <option name="version" value="1.0" />
+        <option name="width" value="400" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="ldclient.jar">
+        <element id="module-output" name="livedoorfileapi_main" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="library" level="project" name="Gradle: com.github.kittinunf.fuel:fuel-coroutines:1.15.0" />
+        <element id="library" level="project" name="Gradle: com.github.kittinunf.fuel:fuel-gson:1.15.0" />
+        <element id="library" level="project" name="Gradle: com.github.kittinunf.fuel:fuel:1.15.0" />
+        <element id="library" level="project" name="Gradle: com.github.kittinunf.result:result:1.5.0" />
+        <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.5" />
+        <element id="library" level="project" name="Gradle: javax.json:javax.json-api:1.1.2" />
+        <element id="library" level="project" name="Gradle: junit:junit:4.12" />
+        <element id="library" level="project" name="Gradle: no.tornado:tornadofx:1.7.17" />
+        <element id="library" level="project" name="Gradle: org.glassfish:javax.json:1.1.2" />
+        <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.3" />
+        <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.60" />
+        <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.2.60" />
+        <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.60" />
+        <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.60" />
+        <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.60" />
+        <element id="library" level="project" name="Gradle: org.jetbrains.kotlinx:atomicfu-common:0.11.0" />
+        <element id="library" level="project" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-common:0.24.0" />
+        <element id="library" level="project" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:0.24.0" />
+        <element id="library" level="project" name="Gradle: org.jetbrains:annotations:13.0" />
+        <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources" />
+      </element>
+    </root>
+  </artifact>
+</component>
